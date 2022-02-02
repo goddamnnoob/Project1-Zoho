@@ -91,7 +91,17 @@ public class CleanSlate{
                         defunctCoin(black, player);
                     }
                     else{
-                    defunctCoin(red, player);
+                        if(redPresent){
+                            defunctCoin(red, player);
+                            redPresent = false;
+                        }
+                        else{
+                            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!");
+                            System.out.println("Invalid Input");
+                            System.out.println("Red coin is not present");
+                            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!");
+                            turn = !turn;
+                        }
                     }
                     break;
                 case 6:
